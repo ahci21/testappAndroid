@@ -39,7 +39,9 @@ class Cotizador : AppCompatActivity() {
             var ganancia : Float = cotizacion - ivaCompra
             var stringG : String = "Ganancia en Pesos: \$" + ganancia.toString()
             txtGananciaFinal.text = stringG
+            //Actualizado
         }
+
 
     }
 }
