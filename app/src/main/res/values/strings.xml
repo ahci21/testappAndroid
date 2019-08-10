@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Hara\'s Tools</string>
+    <string name="button">Button</string>
+    <string name="cotizador">Cotizador</string>
+    <string name="hara_s_tools">Hara\'s Tools</string>
+    <string name="title_activity_cotizador">Cotizador</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="calcular">Calcular</string>
+    <string name="cotizador_ventas">Cotizador Ventas</string>
+    <string name="MoneyTag">$</string>
+    <string name="compra">(compra)</string>
+    <string name="_0">0</string>
+    <string name="_16">16</string>
+    <string name="PorcentageTag">%</string>
+    <string name="costo_venta">Costo Venta</string>
+    <string name="costo_compra">Costo Compra</string>
+    <string name="iva">IVA</string>
+    <string name="venta">(venta)</string>
+    <string name="ganancia">Porcentaje de Ganancia</string>
+    <string name="_00">$0</string>
+</resources>
