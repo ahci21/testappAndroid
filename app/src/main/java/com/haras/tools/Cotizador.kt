@@ -15,6 +15,9 @@ class Cotizador : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cotizador)
 
+
+
+
         /*btnCalcular.setOnClickListener {
             var cotizacion : Float = 0f
             var ivaCompra: Float = 0f
@@ -44,4 +47,21 @@ class Cotizador : AppCompatActivity() {
         */
 
     }
+
+    private fun realizarOperaciones(){
+
+    }
+
+    private fun calcularDolares(){
+
+    }
+
+    private fun calcularIVA(){
+
+    }
+
+    private fun calcularGanancia(){
+
+    }
+
 }
