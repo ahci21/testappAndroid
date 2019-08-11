@@ -5,25 +5,30 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/kirby"
+
         android:weightSum="10"
         tools:context=".Cotizador">
 
     <RelativeLayout
             android:layout_weight="2"
             android:layout_width="match_parent"
-            android:layout_height="117dp">
-            <TextView
-                    android:text="holi"
-                    android:textSize="30dp"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_centerInParent="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
+            android:layout_height="127dp">
+        <TextView
+                android:text="holi"
+                android:textSize="30dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        />
 
-            />
+        />
 
     </RelativeLayout>
+    <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_weight="2">
+
+    </androidx.gridlayout.widget.GridLayout>
 
 </LinearLayout>
