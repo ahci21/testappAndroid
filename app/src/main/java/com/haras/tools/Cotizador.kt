@@ -15,7 +15,7 @@ class Cotizador : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cotizador)
 
-        btnCalcular.setOnClickListener {
+        /*btnCalcular.setOnClickListener {
             var cotizacion : Float = 0f
             var ivaCompra: Float = 0f
 
@@ -41,7 +41,7 @@ class Cotizador : AppCompatActivity() {
             txtGananciaFinal.text = stringG
             //Actualizado
         }
-
+        */
 
     }
 }

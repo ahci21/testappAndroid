@@ -11,9 +11,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnCotizador.setOnClickListener {
-            startActivity(Intent(this, Cotizador::class.java))
-        }
+        btnCotizador.setOnClickListener{openCotizador()}
 
     }
+
+    private fun openCotizador(){
+        startActivity(Intent(this, Cotizador::class.java))
+    }
+
 }
