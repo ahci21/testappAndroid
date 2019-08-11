@@ -71,9 +71,10 @@ class Cotizador : AppCompatActivity() {
 
         try {
             precioConImpuestosExtra = editCantidad.text.toString().toFloat() * usd * iva
+            precioCompra = precioConImpuestosExtra
 
             if(swIVA.isChecked){
-                precioCompra = precioConImpuestosExtra
+
                 precioConImpuestosExtra = precioCompra * iva
                 precioVenta = precioConImpuestosExtra * ganancia
                 txtGananciaAlterna.setText("Ganancia si conservas IVA extra: $"+(precioVenta-precioCompra))
@@ -81,9 +82,11 @@ class Cotizador : AppCompatActivity() {
             }else{
                 precioVenta = precioConImpuestosExtra * ganancia
                 txtGananciaAlterna.setText("")
+                txtHacienda.setText("")
             }
         }catch (e:Throwable){
             precioConImpuestosExtra = 0f
+            precioCompra = 0f
             precioVenta = 0f
         }
 
