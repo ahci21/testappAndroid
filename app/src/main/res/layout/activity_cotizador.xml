@@ -23,10 +23,9 @@
                     android:text="Switch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/swIVA" android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/txtCompra"
+                    android:id="@+id/swIVA"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
             <TextView
                     android:text="Precio de Compra"
@@ -37,14 +36,15 @@
                     app:layout_constraintTop_toTopOf="parent" android:textColor="#ffffff"
                     android:textAlignment="center"/>
             <TextView
-                    android:text="000.00"
+                    android:text="$00.00"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtCompra" android:layout_marginStart="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/textView16"
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginEnd="8dp" android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toTopOf="@+id/swIVA"/>
+                    android:layout_marginEnd="8dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" android:layout_marginTop="32dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -149,8 +149,8 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-            android:layout_width="387dp"
-            android:layout_height="113dp"
+            android:layout_width="388dp"
+            android:layout_height="136dp"
             android:id="@+id/cardView4"
             app:cardBackgroundColor="#f8ea4c"
             app:layout_constraintStart_toStartOf="parent"
@@ -162,6 +162,16 @@
                 android:layout_height="match_parent">
 
             <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtHacienda"
+                    android:textColor="#B30B0B"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"
+                    android:text="asdads" android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtVenta"/>
+            <TextView
                     android:text="Precio de venta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/textView18"
@@ -171,31 +181,32 @@
                     android:layout_marginStart="8dp"/>
             <TextView
                     android:text="00.00"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/txtVenta"
+                    android:layout_width="99dp"
+                    android:layout_height="40dp" android:id="@+id/txtVenta"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/textView18"
-                    android:layout_marginTop="16dp" app:layout_constraintHorizontal_bias="0.498"/>
+                    android:layout_marginTop="16dp" app:layout_constraintHorizontal_bias="0.498"
+                    android:textSize="30sp" android:textColor="#FFFFFF"/>
             <TextView
                     android:text="Porcentaje de ganacia"
                     android:layout_width="160dp"
                     android:layout_height="19dp" android:id="@+id/textView20"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/txtVenta"
-                    app:layout_constraintEnd_toStartOf="@+id/editPorcentaje" android:layout_marginEnd="8dp"
-                    app:layout_constraintHorizontal_bias="0.365" app:layout_constraintVertical_bias="0.05"/>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/editPorcentaje" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtHacienda"/>
             <EditText
-                    android:layout_width="65dp"
-                    android:layout_height="38dp"
+                    android:layout_width="82dp"
+                    android:layout_height="36dp"
                     android:inputType="numberDecimal"
                     android:ems="10"
                     android:id="@+id/editPorcentaje"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="64dp"
-                    android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtVenta"/>
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="76dp"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/txtHacienda"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

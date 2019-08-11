@@ -1,23 +1,16 @@
 package com.haras.tools
 
-import android.net.TrafficStats
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.View
-import android.widget.CompoundButton
-import android.widget.Switch
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_cotizador.*
-import java.math.RoundingMode
-import java.text.DecimalFormat
 
 class Cotizador : AppCompatActivity() {
 
-    private var cantidadInicial : Float = 0f
-    private var cantidadInicialAlterna : Float = 0f
-    private var cantidadFinal : Float = 0f
+    private var precioConImpuestosExtra : Float = 0f
+    private var precioCompra : Float = 0f
+    private var precioVenta : Float = 0f
     private var usd : Float = 1f
     private var iva : Float = 1.16f
     private var ganancia : Float = 1f
@@ -77,25 +70,26 @@ class Cotizador : AppCompatActivity() {
 
 
         try {
-            cantidadInicial = editCantidad.text.toString().toFloat() * usd * iva
+            precioConImpuestosExtra = editCantidad.text.toString().toFloat() * usd * iva
 
             if(swIVA.isChecked){
-                cantidadInicialAlterna = cantidadInicial
-                cantidadInicial = cantidadInicialAlterna * iva
-                cantidadFinal = cantidadInicial * ganancia
-                txtGananciaAlterna.setText("Ganancia si conservas IVA extra: $"+(cantidadFinal-cantidadInicialAlterna))
+                precioCompra = precioConImpuestosExtra
+                precioConImpuestosExtra = precioCompra * iva
+                precioVenta = precioConImpuestosExtra * ganancia
+                txtGananciaAlterna.setText("Ganancia si conservas IVA extra: $"+(precioVenta-precioCompra))
+                txtHacienda.setText("$"+(precioConImpuestosExtra-precioCompra)+" para Hacienda")
             }else{
-                cantidadFinal = cantidadInicial * ganancia
+                precioVenta = precioConImpuestosExtra * ganancia
                 txtGananciaAlterna.setText("")
             }
         }catch (e:Throwable){
-            cantidadInicial = 0f
-            cantidadFinal = 0f
+            precioConImpuestosExtra = 0f
+            precioVenta = 0f
         }
 
-        txtCompra.setText("$"+cantidadInicial)
-        txtVenta.setText("$"+cantidadFinal)
-        txtGanancia.setText("$"+(cantidadFinal-cantidadInicial))
+        txtCompra.setText("$"+precioCompra)
+        txtVenta.setText("$"+precioVenta)
+        txtGanancia.setText("$"+(precioVenta-precioConImpuestosExtra))
 
 
     }
