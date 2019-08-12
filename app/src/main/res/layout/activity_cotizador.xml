@@ -13,28 +13,29 @@
             android:layout_height="186dp"
             app:cardCornerRadius="10dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="28dp"
             android:id="@+id/cardView3"
-            android:layout_marginTop="28dp" app:layout_constraintTop_toBottomOf="@+id/cardView2"
+            android:layout_marginTop="40dp" app:layout_constraintTop_toBottomOf="@+id/cardView2"
             app:cardBackgroundColor="#ad4cf8">
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
             <Switch
-                    android:text="Switch"
+                    android:text="IVA  "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/swIVA"
-                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="26dp"
                     android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+                    android:textColor="#ffffffff" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCompra" app:layout_constraintVertical_bias="0.608"/>
             <TextView
-                    android:text="Precio de Compra"
-                    android:layout_width="156dp"
-                    android:layout_height="22dp" android:id="@+id/textView16" app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Precio Compra"
+                    android:layout_width="152dp"
+                    android:layout_height="28dp" android:id="@+id/textView16" app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp"
                     app:layout_constraintTop_toTopOf="parent" android:textColor="#ffffff"
-                    android:textAlignment="center"/>
+                    android:textAlignment="center" android:textSize="20sp" android:layout_marginTop="5dp"/>
             <TextView
                     android:text="$00.00"
                     android:layout_width="wrap_content"
@@ -44,7 +45,17 @@
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp"
                     android:textColor="#FFFFFF"
-                    android:textSize="30sp" android:layout_marginTop="32dp"/>
+                    android:textSize="35sp" android:layout_marginTop="32dp"/>
+            <TextView
+                    android:text="2xIVA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2" android:textColor="#ffffffff"
+                    android:layout_marginTop="11dp" app:layout_constraintTop_toBottomOf="@+id/txtCompra"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/swIVA"
+                    android:layout_marginStart="1dp" app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintVertical_bias="0.255"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -52,7 +63,7 @@
             android:layout_height="186dp"
             app:cardCornerRadius="10dp"
             app:layout_constraintTop_toBottomOf="@+id/cardView2"
-            android:id="@+id/cardView5" app:cardBackgroundColor="#644cf8" android:layout_marginTop="28dp"
+            android:id="@+id/cardView5" app:cardBackgroundColor="#644cf8" android:layout_marginTop="40dp"
 
 
             android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
@@ -61,41 +72,53 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             <TextView
-                    android:text="Precio de Lista"
-                    android:layout_width="156dp"
-                    android:layout_height="22dp" android:id="@+id/textView13" app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Precio Lista"
+                    android:layout_width="157dp"
+                    android:layout_height="28dp" android:id="@+id/textView13" app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp"
                     app:layout_constraintTop_toTopOf="parent" android:textColor="#ffffff"
-                    android:textAlignment="center"/>
+                    android:textAlignment="center" android:textSize="20sp" android:layout_marginTop="5dp"/>
             <EditText
-                    android:layout_width="133dp"
-                    android:layout_height="51dp"
+                    android:layout_width="129dp"
+                    android:layout_height="61dp"
                     android:inputType="numberDecimal"
                     android:ems="10"
-                    android:id="@+id/editCantidad" android:textSize="30sp" android:hint="00.00"
-                    android:textColor="#ffffffff" android:layout_marginTop="32dp"
+                    android:id="@+id/editCantidad" android:textSize="35sp" android:hint="00.00"
+                    android:textColor="#ffffffff" android:layout_marginTop="24dp"
                     app:layout_constraintTop_toBottomOf="@+id/textView13" android:layout_marginEnd="4dp"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintEnd_toEndOf="parent" android:textColorHint="#ffffffff"/>
             <TextView
                     android:text="$"
-                    android:layout_width="21dp"
-                    android:layout_height="42dp"
+                    android:layout_width="26dp"
+                    android:layout_height="59dp"
                     android:id="@+id/textView14" android:textColor="#ffffffff"
-                    android:textSize="35sp" android:layout_marginStart="4dp"
+                    android:textSize="40sp" android:layout_marginStart="4dp"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toStartOf="@+id/editCantidad" app:layout_constraintHorizontal_bias="0.0"
-                    android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/textView13"
-                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/swUnit"/>
+                    android:layout_marginTop="15dp" app:layout_constraintTop_toBottomOf="@+id/textView13"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/swUnit"
+                    app:layout_constraintVertical_bias="0.185"/>
             <Switch
-                    android:text="Switch"
+                    android:text="MXN  "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/swUnit" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/editCantidad"
-                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="26dp"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="#ffffffff" app:layout_constraintVertical_bias="0.366"
+                    android:textCursorDrawable="@color/colorPrimary" android:buttonTint="@color/colorPrimary"/>
+            <TextView
+                    android:text="USD"
+                    android:layout_width="33dp"
+                    android:layout_height="21dp"
+                    android:id="@+id/textView" android:textColor="#ffffff" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/editCantidad"
+                    app:layout_constraintStart_toEndOf="@+id/swUnit" android:layout_marginStart="1dp"
+                    app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.342"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
@@ -105,7 +128,7 @@
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" android:id="@+id/cardView2" app:cardBackgroundColor="#03a9f5"
             app:cardCornerRadius="20dp" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
     >
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -114,21 +137,21 @@
 
             <TextView
                     android:text="Ganancia"
-                    android:layout_width="361dp"
-                    android:layout_height="31dp" android:id="@+id/textView6"
+                    android:layout_width="360dp"
+                    android:layout_height="37dp" android:id="@+id/textView6"
 
 
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.444"
-                    android:textColor="#ffffff" android:textSize="18sp" android:paddingLeft="20dp"
+                    android:textColor="#ffffff" android:textSize="25sp" android:paddingLeft="20dp"
                     android:paddingTop="5dp"/>
             <TextView
                     android:text="$00.00"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtGanancia" android:layout_marginTop="8dp"
+                    android:id="@+id/txtGanancia" android:layout_marginTop="7dp"
                     app:layout_constraintTop_toBottomOf="@+id/textView6" android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp"
@@ -149,14 +172,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-            android:layout_width="388dp"
-            android:layout_height="136dp"
+            android:layout_width="361dp"
+            android:layout_height="162dp"
             android:id="@+id/cardView4"
-            app:cardBackgroundColor="#f8ea4c"
+            app:cardBackgroundColor="#9EC49A"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/cardView3">
+            android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/cardView3"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintVertical_bias="0.339">
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -172,41 +197,44 @@
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/txtVenta"/>
             <TextView
-                    android:text="Precio de venta"
+                    android:text="Precio Venta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/textView18"
                     app:layout_constraintTop_toTopOf="parent"
                     android:layout_marginTop="4dp" app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp" android:textColor="#ffffffff" android:textSize="25sp"/>
             <TextView
                     android:text="00.00"
-                    android:layout_width="99dp"
-                    android:layout_height="40dp" android:id="@+id/txtVenta"
+                    android:layout_width="109dp"
+                    android:layout_height="45dp" android:id="@+id/txtVenta"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/textView18"
-                    android:layout_marginTop="16dp" app:layout_constraintHorizontal_bias="0.498"
-                    android:textSize="30sp" android:textColor="#FFFFFF"/>
+                    android:layout_marginTop="8dp" app:layout_constraintHorizontal_bias="0.501"
+                    android:textSize="35sp" android:textColor="#FFFFFF" android:textAlignment="center"/>
             <TextView
                     android:text="Porcentaje de ganacia"
-                    android:layout_width="160dp"
-                    android:layout_height="19dp" android:id="@+id/textView20"
+                    android:layout_width="165dp"
+                    android:layout_height="25dp" android:id="@+id/textView20"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="5dp"
                     app:layout_constraintEnd_toStartOf="@+id/editPorcentaje" android:layout_marginTop="8dp"
-                    app:layout_constraintTop_toBottomOf="@+id/txtHacienda"/>
+                    app:layout_constraintTop_toBottomOf="@+id/txtHacienda" android:textSize="14sp"
+                    android:textColor="#ffffffff" android:textAlignment="center"
+                    app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="0.0"/>
             <EditText
-                    android:layout_width="82dp"
-                    android:layout_height="36dp"
+                    android:layout_width="103dp"
+                    android:layout_height="44dp"
                     android:inputType="numberDecimal"
                     android:ems="10"
                     android:id="@+id/editPorcentaje"
-                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="76dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="43dp"
                     android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/txtHacienda"/>
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/txtHacienda"
+                    android:hint="0%" android:textColor="#ffffffff" android:textColorHint="@color/colorPrimary"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
