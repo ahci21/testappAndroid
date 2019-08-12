@@ -77,8 +77,8 @@ class Cotizador : AppCompatActivity() {
 
                 precioConImpuestosExtra = precioCompra * iva
                 precioVenta = precioConImpuestosExtra * ganancia
-                txtGananciaAlterna.setText("Ganancia si conservas IVA extra: $"+(precioVenta-precioCompra))
-                txtHacienda.setText("$"+(precioConImpuestosExtra-precioCompra)+" para Hacienda")
+                txtGananciaAlterna.setText("Ganancia si conservas IVA extra: $%.2f".format(precioVenta-precioCompra))
+                txtHacienda.setText("$%.2f".format((precioConImpuestosExtra-precioCompra))+" para Hacienda")
             }else{
                 precioVenta = precioConImpuestosExtra * ganancia
                 txtGananciaAlterna.setText("")
@@ -90,9 +90,9 @@ class Cotizador : AppCompatActivity() {
             precioVenta = 0f
         }
 
-        txtCompra.setText("$"+precioCompra)
-        txtVenta.setText("$"+precioVenta)
-        txtGanancia.setText("$"+(precioVenta-precioConImpuestosExtra))
+        txtCompra.setText("$%.2f".format(precioCompra))
+        txtVenta.setText("$%.2f".format(precioVenta))
+        txtGanancia.setText("$%.2f".format((precioVenta-precioConImpuestosExtra)))
 
 
     }
