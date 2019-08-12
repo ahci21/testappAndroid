@@ -1,5 +1,6 @@
 package com.haras.tools
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -19,6 +20,9 @@ class Cotizador : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cotizador)
 
+        txtVenta.setOnClickListener {
+            startActivity(Intent(this,iZettle::class.java).putExtra("precioVenta",""+precioVenta))
+        }
 
         editCantidad.addTextChangedListener(object:TextWatcher{
             override fun afterTextChanged(s: Editable) {}

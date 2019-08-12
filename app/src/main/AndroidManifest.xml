@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".iZettle">
+        </activity>
         <activity
                 android:name=".Cotizador"
                 android:configChanges="orientation|keyboardHidden|screenSize"

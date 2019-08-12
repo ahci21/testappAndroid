@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Test">
+        <item>Pago único</item>
+        <item>3 MSI</item>
+        <item>6 MSI</item>
+        <item>9 MSI</item>
+        <item>12 MSI</item>
+    </string-array>
+
+</resources>

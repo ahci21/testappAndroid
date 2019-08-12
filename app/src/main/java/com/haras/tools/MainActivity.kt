@@ -12,11 +12,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnCotizador.setOnClickListener{openCotizador()}
+        btnIzettle.setOnClickListener{openiZettle()}
 
     }
 
     private fun openCotizador(){
         startActivity(Intent(this, Cotizador::class.java))
+    }
+
+    private fun openiZettle(){
+        startActivity(Intent(this,iZettle::class.java))
     }
 
 }
